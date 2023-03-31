@@ -1,24 +1,19 @@
-# helm schema gen plugin [ CURRENTLY NOT MAINTAINED ]
+# helm schema gen plugin
 
-![](https://github.com/karuppiah7890/helm-schema-gen/workflows/goreleaser/badge.svg)
+![](https://github.com/KnechtionsCoding/helm-schema-gen/workflows/goreleaser/badge.svg)
 
 So that you don't have to write values.schema.json by hand from scratch for your Helm 3 charts
 
 [Helm](https://helm.sh) plugin to generate [JSON Schema for values yaml](https://helm.sh/docs/topics/charts/#schema-files)
 
-## Note about maintenance
-
-I currently don't have the bandwidth to reply to issues, write code and review PRs. For now I recommend forking the repo and making changes and using the fork 😅
-
 ## Code stuff
 
 Nothing fancy about the code, all the heavy lifting is done by:
 
-- [go-jsonschema-generator](https://github.com/karuppiah7890/go-jsonschema-generator) - for generating JSON schema. It's a fork of [this](https://github.com/mcuadros/go-jsonschema-generator). Thanks to [@mcuadros](https://github.com/mcuadros)
+- [go-jsonschema-generator](https://github.com/KnechtionsCoding/go-jsonschema-generator) - for generating JSON schema. It's a fork of [this](https://github.com/mcuadros/go-jsonschema-generator). Thanks to [@mcuadros](https://github.com/mcuadros)
 - [go-yaml](https://github.com/go-yaml/yaml/) - for YAML parsing
 - [cobra](https://github.com/spf13/cobra) - for CLI stuff
 - [The Go stdlib](https://golang.org/pkg/) - for everything else
-
 
 ## Install
 
@@ -26,10 +21,10 @@ The plugin works with both Helm v2 and v3 versions as it's agnostic to the Helm
 binary version
 
 ```
-$ helm plugin install https://github.com/karuppiah7890/helm-schema-gen.git
-karuppiah7890/helm-schema-gen info checking GitHub for tag '0.0.4'
-karuppiah7890/helm-schema-gen info found version: 0.0.4 for 0.0.4/Darwin/x86_64
-karuppiah7890/helm-schema-gen info installed ./bin/helm-schema-gen
+$ helm plugin install https://github.com/KnechtionsCoding/helm-schema-gen.git
+KnechtionsCoding/helm-schema-gen info checking GitHub for tag '0.0.4'
+KnechtionsCoding/helm-schema-gen info found version: 0.0.4 for 0.0.4/Darwin/x86_64
+KnechtionsCoding/helm-schema-gen info installed ./bin/helm-schema-gen
 Installed plugin: schema-gen
 ```
 
@@ -217,14 +212,9 @@ $ helm schema-gen values.yaml
 You can save it to a file like this
 
 ```
-$ helm schema-gen values.yaml > values.schema.json
+helm schema-gen values.yaml > values.schema.json
 ```
 
 ## Issues? Feature Requests? Proposals? Feedback?
 
-Note: I currently don't have the bandwidth to reply to issues, write code and review PRs. For now I recommend forking the repo and making changes and using the fork 😅
-
-Put them all in [GitHub issues](https://github.com/karuppiah7890/helm-schema-gen/issues) 😁
-I value every feedback. I really want to make sure that my tools help people and does not
-annoy people. I want my tools to enable people and not hinder them. I'll do my best to help you
-if you face any hindrance because of using my tools! :)
+Put them all in [GitHub issues](https://github.com/KnechtionsCoding/helm-schema-gen/issues)
