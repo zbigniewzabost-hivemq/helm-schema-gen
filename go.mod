@@ -1,4 +1,4 @@
-module github.com/knechtionscoding/helm-schema-gen
+module github.com/zbigniewzabost-hivemq/helm-schema-gen
 
 go 1.19
 
